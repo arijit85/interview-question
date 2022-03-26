@@ -3,13 +3,13 @@ package com.example.demo.service;
 import com.example.demo.helper.UrlEncoderDecoder;
 import com.example.demo.persistence.RecordNotFoundException;
 import com.example.demo.persistence.UrlRepository;
-import com.example.demo.persistence.entities.UrlEntity;
+import com.example.demo.persistence.entity.UrlEntity;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
 @Service
 @AllArgsConstructor
-public class UrlShorteningService {
+public class UrlService {
 
     UrlEncoderDecoder urlEncoderDecoder;
     UrlRepository urlRepository;
@@ -30,4 +30,6 @@ public class UrlShorteningService {
                 .orElseThrow(() -> new RecordNotFoundException("no record found for" + shortUrl))
                 .getUrl();
     }
+
+
 }

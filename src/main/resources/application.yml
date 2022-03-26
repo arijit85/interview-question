@@ -21,3 +21,8 @@ spring:
     console:
       enabled: true
 
+  quartz:
+    job-store-type: jdbc
+    properties.org.quartz:
+      scheduler.instanceId: AUTO
+      threadPool.threadCount: 5
