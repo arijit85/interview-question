@@ -3,7 +3,8 @@ package com.example.demo.persistence;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
- 
+
+import com.example.demo.exception.RecordNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,7 +25,7 @@ public class EmployeeService {
         }
     }
      
-    public EmployeeEntity getEmployeeById(Long id) throws RecordNotFoundException 
+    public EmployeeEntity getEmployeeById(Long id) throws RecordNotFoundException
     {
         Optional<EmployeeEntity> employee = repository.findById(id);
          

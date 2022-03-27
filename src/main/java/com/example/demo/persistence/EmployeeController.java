@@ -1,5 +1,6 @@
 package com.example.demo.persistence;
 
+import com.example.demo.exception.RecordNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;

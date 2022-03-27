@@ -1,6 +1,6 @@
 package com.example.demo.controller;
 
-import com.example.demo.persistence.RecordNotFoundException;
+import com.example.demo.exception.RecordNotFoundException;
 import com.example.demo.service.UrlService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;

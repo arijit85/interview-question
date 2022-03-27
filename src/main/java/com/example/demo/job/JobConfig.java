@@ -16,7 +16,7 @@ public class JobConfig {
         return TriggerBuilder.newTrigger()
                 .forJob(urlPurgeJobDetails)
                 .withIdentity("urlPurgeTrigger")
-                .withSchedule(CronScheduleBuilder.cronSchedule("0 * * ? * *"))
+                .withSchedule(CronScheduleBuilder.cronSchedule("0 */30 * ? * *"))
                 .build();
     }
 }
