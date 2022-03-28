@@ -10,6 +10,5 @@ import java.util.Date;
 @AllArgsConstructor
 @Getter
 public class ErrorMessage {
-    private LocalDateTime timestamp;
     private String message;
 }

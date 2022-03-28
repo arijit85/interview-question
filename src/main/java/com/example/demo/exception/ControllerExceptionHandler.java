@@ -16,7 +16,6 @@ public class ControllerExceptionHandler {
     @ResponseStatus(value = HttpStatus.NOT_FOUND)
     public ErrorMessage resourceNotFoundException(RecordNotFoundException ex, WebRequest request) {
         ErrorMessage message = new ErrorMessage(
-                LocalDateTime.now(),
                 ex.getMessage());
         return message;
     }
@@ -25,7 +24,6 @@ public class ControllerExceptionHandler {
     @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
     public ErrorMessage runtimeException(RuntimeException ex, WebRequest request) {
         ErrorMessage message = new ErrorMessage(
-                LocalDateTime.now(),
                 ex.getMessage());
         return message;
     }
@@ -34,7 +32,6 @@ public class ControllerExceptionHandler {
     @ResponseStatus(value = HttpStatus.INTERNAL_SERVER_ERROR)
     public ErrorMessage globalException(Exception ex, WebRequest request) {
         ErrorMessage message = new ErrorMessage(
-                LocalDateTime.now(),
                 ex.getMessage());
         return message;
     }
